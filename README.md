@@ -1,5 +1,8 @@
 # Xalgo PEGjs Parser
 
+This is a test parser based on a rule format proposal made on May 21, 2020. It
+is currently not compatible with the master Interlibr system.
+
 ## PEGjs Grammar:
 
 ```js
