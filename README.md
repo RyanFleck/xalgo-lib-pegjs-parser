@@ -176,554 +176,351 @@ METADATA.STANDARDS ;
 
 ```json
 {
-  "input": [
-    {
-      "type": "CONTEXT",
-      "dataHeader": null,
-      "data": [{"input":[{"type":"CONTEXT","dataHeader":null,"data":[{"context":{"value":"jurisdictions","possible-matches":null},"cells":["SG","SG"]},{"context":{"value":"datestimes","possible-matches":null},"cells":["20180401T00:00","99991230T23:50"]},{"context":{"value":"timezones","possible-matches":null},"cells":["UTC+08:00"]}]},{"type":"SOURCES","dataHeader":null,"data":[{"context":{"value":"document","possible-matches":null},"cells":["is.xalgo","purchaseorder"]}]},{"type":"FILTER","dataHeader":null,"data":[{"context":{"value":"parties.buyer.industry","possible-matches":null},"cells":[6810]},{"context":{"value":"item.classification","possible-matches":null},"cells":[80131600]},{"context":{"value":"item.price.currency","possible-matches":null},"cells":["SGD"]}]},{"type":"PARTITION.onehot","dataHeader":["A","B","C","D","E","F"],"data":[{"context":{"value":"buyer_profile","possible-matches":["sgc1"]},"cells":["Y","N","N","N","N","N"]},{"context":{"value":"buyer_profile","possible-matches":["sgc2"]},"cells":["N","Y","N","N","N","N"]},{"context":{"value":"buyer_profile","possible-matches":["sgcn"]},"cells":["N","N","Y","N","N","N"]},{"context":{"value":"buyer_profile","possible-matches":["spr1"]},"cells":["N","N","N","Y","N","N"]},{"context":{"value":"buyer_profile","possible-matches":["sprn"]},"cells":["N","N","N","N","Y","N"]},{"context":{"value":"buyer_profile","possible-matches":["sfen"]},"cells":["N","N","N","N","N","Y"]}]}],"output":[{"type":"ASSERTION","dataHeader":["A","B","C","D","E","F"],"data":[{"property":"absd_rate","property-operations":[0,"*","price"],"cells":["X","U","U","U","U","U"]},{"property":"absd_rate","property-operations":[0.07,"*","price"],"cells":["U","X","U","U","U","U"]},{"property":"absd_rate","property-operations":[0.1,"*","price"],"cells":["U","U","X","U","U","U"]},{"property":"absd_rate","property-operations":[0.05,"*","price"],"cells":["U","U","U","X","U","U"]},{"property":"absd_rate","property-operations":[0.1,"*","price"],"cells":["U","U","U","U","X","U"]},{"property":"absd_rate","property-operations":[0.15,"*","price"],"cells":["U","U","U","U","U","X"]}]},{"type":"PURPOSE","dataHeader":null,"data":[{"property":"agency.rulemaker_ruletaker_thirdparty","property-operations":null,"cells":["ruletaker"]},{"property":"agency.must_may_should","property-operations":null,"cells":["must"]},{"property":"agency.affirmative_negative_interrogative","property-operations":null,"cells":["affirmative"]},{"property":"agency.be_do_have","property-operations":null,"cells":["do"]},{"property":"intent.logical_practical_ethical","property-operations":null,"cells":["practical","ethical"]},{"property":"intent.imperative_declarative_empirical","property-operations":null,"cells":["imperative"]},{"property":"intent.governance_commerce_other","property-operations":null,"cells":["governance"]}]},{"type":"WEIGHT","dataHeader":null,"data":[{"property":"weight.obligation","property-operations":null,"cells":["70/99"]},{"property":"weight.commitment","property-operations":null,"cells":["60/99"]},{"property":"weight.consequence","property-operations":null,"cells":["15/99"]}]}],"meta":[{"type":"MANAGEMENT","dataHeader":null,"data":[{"context":{"value":"rule.entity.id","possible-matches":null},"cells":["InlandRevenueAuthorityofSingapore","https://www.iras.gov.sg/","d6mgsIlDx5ME"]},{"context":{"value":"rule.name.eng","possible-matches":null},"cells":["AdditionalBuyersStampDutyonPurchaseorTransferofResidentialProperty"]},{"context":{"value":"rule.id","possible-matches":null},"cells":["r6qW2UeKE5hq"]},{"context":{"value":"rule.version","possible-matches":null},"cells":["0.0.2"]},{"context":{"value":"rule.runtime","possible-matches":null},"cells":["0.5.0"]},{"context":{"value":"rule.criticality","possible-matches":null},"cells":["experimental"]},{"context":{"value":"rule.url","possible-matches":null},"cells":["https://www.iras.gov.sg/IRASHome/OtherTaxes/StampDutyforProperty/WorkingoutyourStamp\r\nDuty/BuyingorAcquiringProperty/WhatistheDutythatINeedtoPayasaBuyerorTransfereeof\r\nResidentialProperty/AdditionalBuyersStampDutyABSD/"]},{"context":{"value":"rule.doi","possible-matches":null},"cells":["10.1206/yd5Dw9Im5rJfaGheM84cFq"]},{"context":{"value":"rule.manager.id","possible-matches":null},"cells":["JosephPotvin","<jpotvin@xalgorithms.org","3ErzHgMpIhYI"]},{"context":{"value":"rule.author.id","possible-matches":null},"cells":["JosephPotvin","<jpotvin@xalgorithms.org","3ErzHgMpIhYI"]},{"context":{"value":"rule.maintainer.id","possible-matches":null},"cells":["RyanFleck","<ryan.fleck@protonmail.com>","wVXkRXp1palS"]}]},{"type":"STANDARDS","dataHeader":null,"data":[{"context":{"value":"parties.buyer.industry","possible-matches":null},"cells":["ISIC"]},{"context":{"value":"data","possible-matches":null},"cells":["https://unstats.un.org/unsd/publication/seriesM/seriesm_4rev4e.pdf"]},{"context":{"value":"item:classification","possible-matches":null},"cells":["UNSPSC","https://www.unspsc.org"]},{"context":{"value":"document","possible-matches":null},"cells":["UBL","https://docs.oasisopen.org/ubl/osUBL2.2/mod/summary/reports/AllUBL2.2Documents.html"]}]}]}
+    "input": [
         {
-          "context": {
-            "value": "jurisdictions",
-            "possible-matches": null
-          },
-          "cells": [
-            "SG",
-            "SG"
-          ]
-        },
-        {
-          "context": {
-            "value": "datestimes",
-            "possible-matches": null
-          },
-          "cells": [
-            "20180401T00:00",
-            "99991230T23:50"
-          ]
-        },
-        {
-          "context": {
-            "value": "timezones",
-            "possible-matches": null
-          },
-          "cells": [
-            "UTC+08:00"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "SOURCES",
-      "dataHeader": null,
-      "data": [
-        {
-          "context": {
-            "value": "document",
-            "possible-matches": null
-          },
-          "cells": [
-            "is.xalgo",
-            "purchaseorder"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "FILTER",
-      "dataHeader": null,
-      "data": [
-        {
-          "context": {
-            "value": "parties.buyer.industry",
-            "possible-matches": null
-          },
-          "cells": [
-            6810
-          ]
-        },
-        {
-          "context": {
-            "value": "item.classification",
-            "possible-matches": null
-          },
-          "cells": [
-            80131600
-          ]
-        },
-        {
-          "context": {
-            "value": "item.price.currency",
-            "possible-matches": null
-          },
-          "cells": [
-            "SGD"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "PARTITION.onehot",
-      "dataHeader": [
-        "A",
-        "B",
-        "C",
-        "D",
-        "E",
-        "F"
-      ],
-      "data": [
-        {
-          "context": {
-            "value": "buyer_profile",
-            "possible-matches": [
-              "sgc1"
+            "type": "CONTEXT",
+            "dataHeader": null,
+            "data": [
+                {
+                    "context": {
+                        "value": "jurisdictions",
+                        "possible-matches": null
+                    },
+                    "cells": ["SG", "SG"]
+                },
+                {
+                    "context": {
+                        "value": "datestimes",
+                        "possible-matches": null
+                    },
+                    "cells": ["20180401T00:00", "99991230T23:50"]
+                },
+                {
+                    "context": {
+                        "value": "timezones",
+                        "possible-matches": null
+                    },
+                    "cells": ["UTC+08:00"]
+                }
             ]
-          },
-          "cells": [
-            "Y",
-            "N",
-            "N",
-            "N",
-            "N",
-            "N"
-          ]
         },
         {
-          "context": {
-            "value": "buyer_profile",
-            "possible-matches": [
-              "sgc2"
+            "type": "SOURCES",
+            "dataHeader": null,
+            "data": [
+                {
+                    "context": {
+                        "value": "document",
+                        "possible-matches": null
+                    },
+                    "cells": ["is.xalgo", "purchaseorder"]
+                }
             ]
-          },
-          "cells": [
-            "N",
-            "Y",
-            "N",
-            "N",
-            "N",
-            "N"
-          ]
         },
         {
-          "context": {
-            "value": "buyer_profile",
-            "possible-matches": [
-              "sgcn"
+            "type": "FILTER",
+            "dataHeader": null,
+            "data": [
+                {
+                    "context": {
+                        "value": "parties.buyer.industry",
+                        "possible-matches": null
+                    },
+                    "cells": [6810]
+                },
+                {
+                    "context": {
+                        "value": "item.classification",
+                        "possible-matches": null
+                    },
+                    "cells": [80131600]
+                },
+                {
+                    "context": {
+                        "value": "item.price.currency",
+                        "possible-matches": null
+                    },
+                    "cells": ["SGD"]
+                }
             ]
-          },
-          "cells": [
-            "N",
-            "N",
-            "Y",
-            "N",
-            "N",
-            "N"
-          ]
         },
         {
-          "context": {
-            "value": "buyer_profile",
-            "possible-matches": [
-              "spr1"
+            "type": "PARTITION.onehot",
+            "dataHeader": ["A", "B", "C", "D", "E", "F"],
+            "data": [
+                {
+                    "context": {
+                        "value": "buyer_profile",
+                        "possible-matches": ["sgc1"]
+                    },
+                    "cells": ["Y", "N", "N", "N", "N", "N"]
+                },
+                {
+                    "context": {
+                        "value": "buyer_profile",
+                        "possible-matches": ["sgc2"]
+                    },
+                    "cells": ["N", "Y", "N", "N", "N", "N"]
+                },
+                {
+                    "context": {
+                        "value": "buyer_profile",
+                        "possible-matches": ["sgcn"]
+                    },
+                    "cells": ["N", "N", "Y", "N", "N", "N"]
+                },
+                {
+                    "context": {
+                        "value": "buyer_profile",
+                        "possible-matches": ["spr1"]
+                    },
+                    "cells": ["N", "N", "N", "Y", "N", "N"]
+                },
+                {
+                    "context": {
+                        "value": "buyer_profile",
+                        "possible-matches": ["sprn"]
+                    },
+                    "cells": ["N", "N", "N", "N", "Y", "N"]
+                },
+                {
+                    "context": {
+                        "value": "buyer_profile",
+                        "possible-matches": ["sfen"]
+                    },
+                    "cells": ["N", "N", "N", "N", "N", "Y"]
+                }
             ]
-          },
-          "cells": [
-            "N",
-            "N",
-            "N",
-            "Y",
-            "N",
-            "N"
-          ]
-        },
+        }
+    ],
+    "output": [
         {
-          "context": {
-            "value": "buyer_profile",
-            "possible-matches": [
-              "sprn"
+            "type": "ASSERTION",
+            "dataHeader": ["A", "B", "C", "D", "E", "F"],
+            "data": [
+                {
+                    "property": "absd_rate",
+                    "property-operations": [0, "*", "price"],
+                    "cells": ["X", "U", "U", "U", "U", "U"]
+                },
+                {
+                    "property": "absd_rate",
+                    "property-operations": [0.07, "*", "price"],
+                    "cells": ["U", "X", "U", "U", "U", "U"]
+                },
+                {
+                    "property": "absd_rate",
+                    "property-operations": [0.1, "*", "price"],
+                    "cells": ["U", "U", "X", "U", "U", "U"]
+                },
+                {
+                    "property": "absd_rate",
+                    "property-operations": [0.05, "*", "price"],
+                    "cells": ["U", "U", "U", "X", "U", "U"]
+                },
+                {
+                    "property": "absd_rate",
+                    "property-operations": [0.1, "*", "price"],
+                    "cells": ["U", "U", "U", "U", "X", "U"]
+                },
+                {
+                    "property": "absd_rate",
+                    "property-operations": [0.15, "*", "price"],
+                    "cells": ["U", "U", "U", "U", "U", "X"]
+                }
             ]
-          },
-          "cells": [
-            "N",
-            "N",
-            "N",
-            "N",
-            "Y",
-            "N"
-          ]
         },
         {
-          "context": {
-            "value": "buyer_profile",
-            "possible-matches": [
-              "sfen"
+            "type": "PURPOSE",
+            "dataHeader": null,
+            "data": [
+                {
+                    "property": "agency.rulemaker_ruletaker_thirdparty",
+                    "property-operations": null,
+                    "cells": ["ruletaker"]
+                },
+                {
+                    "property": "agency.must_may_should",
+                    "property-operations": null,
+                    "cells": ["must"]
+                },
+                {
+                    "property": "agency.affirmative_negative_interrogative",
+                    "property-operations": null,
+                    "cells": ["affirmative"]
+                },
+                {
+                    "property": "agency.be_do_have",
+                    "property-operations": null,
+                    "cells": ["do"]
+                },
+                {
+                    "property": "intent.logical_practical_ethical",
+                    "property-operations": null,
+                    "cells": ["practical", "ethical"]
+                },
+                {
+                    "property": "intent.imperative_declarative_empirical",
+                    "property-operations": null,
+                    "cells": ["imperative"]
+                },
+                {
+                    "property": "intent.governance_commerce_other",
+                    "property-operations": null,
+                    "cells": ["governance"]
+                }
             ]
-          },
-          "cells": [
-            "N",
-            "N",
-            "N",
-            "N",
-            "N",
-            "Y"
-          ]
+        },
+        {
+            "type": "WEIGHT",
+            "dataHeader": null,
+            "data": [
+                {
+                    "property": "weight.obligation",
+                    "property-operations": null,
+                    "cells": ["70/99"]
+                },
+                {
+                    "property": "weight.commitment",
+                    "property-operations": null,
+                    "cells": ["60/99"]
+                },
+                {
+                    "property": "weight.consequence",
+                    "property-operations": null,
+                    "cells": ["15/99"]
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "output": [
-    {
-      "type": "ASSERTION",
-      "dataHeader": [
-        "A",
-        "B",
-        "C",
-        "D",
-        "E",
-        "F"
-      ],
-      "data": [
+    ],
+    "meta": [
         {
-          "property": "absd_rate",
-          "property-operations": [
-            0,
-            "*",
-            "price"
-          ],
-          "cells": [
-            "X",
-            "U",
-            "U",
-            "U",
-            "U",
-            "U"
-          ]
+            "type": "MANAGEMENT",
+            "dataHeader": null,
+            "data": [
+                {
+                    "context": {
+                        "value": "rule.entity.id",
+                        "possible-matches": null
+                    },
+                    "cells": [
+                        "InlandRevenueAuthorityofSingapore",
+                        "https://www.iras.gov.sg/",
+                        "d6mgsIlDx5ME"
+                    ]
+                },
+                {
+                    "context": {
+                        "value": "rule.name.eng",
+                        "possible-matches": null
+                    },
+                    "cells": ["AdditionalBuyersStampDutyonPurchaseorTransferofResidentialProperty"]
+                },
+                {
+                    "context": {
+                        "value": "rule.id",
+                        "possible-matches": null
+                    },
+                    "cells": ["r6qW2UeKE5hq"]
+                },
+                {
+                    "context": {
+                        "value": "rule.version",
+                        "possible-matches": null
+                    },
+                    "cells": ["0.0.2"]
+                },
+                {
+                    "context": {
+                        "value": "rule.runtime",
+                        "possible-matches": null
+                    },
+                    "cells": ["0.5.0"]
+                },
+                {
+                    "context": {
+                        "value": "rule.criticality",
+                        "possible-matches": null
+                    },
+                    "cells": ["experimental"]
+                },
+                {
+                    "context": {
+                        "value": "rule.url",
+                        "possible-matches": null
+                    },
+                    "cells": [
+                        "https://www.iras.gov.sg/IRASHome/OtherTaxes/StampDutyforProperty/WorkingoutyourStamp\r\nDuty/BuyingorAcquiringProperty/WhatistheDutythatINeedtoPayasaBuyerorTransfereeof\r\nResidentialProperty/AdditionalBuyersStampDutyABSD/"
+                    ]
+                },
+                {
+                    "context": {
+                        "value": "rule.doi",
+                        "possible-matches": null
+                    },
+                    "cells": ["10.1206/yd5Dw9Im5rJfaGheM84cFq"]
+                },
+                {
+                    "context": {
+                        "value": "rule.manager.id",
+                        "possible-matches": null
+                    },
+                    "cells": ["JosephPotvin", "<jpotvin@xalgorithms.org", "3ErzHgMpIhYI"]
+                },
+                {
+                    "context": {
+                        "value": "rule.author.id",
+                        "possible-matches": null
+                    },
+                    "cells": ["JosephPotvin", "<jpotvin@xalgorithms.org", "3ErzHgMpIhYI"]
+                },
+                {
+                    "context": {
+                        "value": "rule.maintainer.id",
+                        "possible-matches": null
+                    },
+                    "cells": ["RyanFleck", "<ryan.fleck@protonmail.com>", "wVXkRXp1palS"]
+                }
+            ]
         },
         {
-          "property": "absd_rate",
-          "property-operations": [
-            0.07,
-            "*",
-            "price"
-          ],
-          "cells": [
-            "U",
-            "X",
-            "U",
-            "U",
-            "U",
-            "U"
-          ]
-        },
-        {
-          "property": "absd_rate",
-          "property-operations": [
-            0.1,
-            "*",
-            "price"
-          ],
-          "cells": [
-            "U",
-            "U",
-            "X",
-            "U",
-            "U",
-            "U"
-          ]
-        },
-        {
-          "property": "absd_rate",
-          "property-operations": [
-            0.05,
-            "*",
-            "price"
-          ],
-          "cells": [
-            "U",
-            "U",
-            "U",
-            "X",
-            "U",
-            "U"
-          ]
-        },
-        {
-          "property": "absd_rate",
-          "property-operations": [
-            0.1,
-            "*",
-            "price"
-          ],
-          "cells": [
-            "U",
-            "U",
-            "U",
-            "U",
-            "X",
-            "U"
-          ]
-        },
-        {
-          "property": "absd_rate",
-          "property-operations": [
-            0.15,
-            "*",
-            "price"
-          ],
-          "cells": [
-            "U",
-            "U",
-            "U",
-            "U",
-            "U",
-            "X"
-          ]
+            "type": "STANDARDS",
+            "dataHeader": null,
+            "data": [
+                {
+                    "context": {
+                        "value": "parties.buyer.industry",
+                        "possible-matches": null
+                    },
+                    "cells": ["ISIC"]
+                },
+                {
+                    "context": {
+                        "value": "data",
+                        "possible-matches": null
+                    },
+                    "cells": ["https://unstats.un.org/unsd/publication/seriesM/seriesm_4rev4e.pdf"]
+                },
+                {
+                    "context": {
+                        "value": "item:classification",
+                        "possible-matches": null
+                    },
+                    "cells": ["UNSPSC", "https://www.unspsc.org"]
+                },
+                {
+                    "context": {
+                        "value": "document",
+                        "possible-matches": null
+                    },
+                    "cells": [
+                        "UBL",
+                        "https://docs.oasisopen.org/ubl/osUBL2.2/mod/summary/reports/AllUBL2.2Documents.html"
+                    ]
+                }
+            ]
         }
-      ]
-    },
-    {
-      "type": "PURPOSE",
-      "dataHeader": null,
-      "data": [
-        {
-          "property": "agency.rulemaker_ruletaker_thirdparty",
-          "property-operations": null,
-          "cells": [
-            "ruletaker"
-          ]
-        },
-        {
-          "property": "agency.must_may_should",
-          "property-operations": null,
-          "cells": [
-            "must"
-          ]
-        },
-        {
-          "property": "agency.affirmative_negative_interrogative",
-          "property-operations": null,
-          "cells": [
-            "affirmative"
-          ]
-        },
-        {
-          "property": "agency.be_do_have",
-          "property-operations": null,
-          "cells": [
-            "do"
-          ]
-        },
-        {
-          "property": "intent.logical_practical_ethical",
-          "property-operations": null,
-          "cells": [
-            "practical",
-            "ethical"
-          ]
-        },
-        {
-          "property": "intent.imperative_declarative_empirical",
-          "property-operations": null,
-          "cells": [
-            "imperative"
-          ]
-        },
-        {
-          "property": "intent.governance_commerce_other",
-          "property-operations": null,
-          "cells": [
-            "governance"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "WEIGHT",
-      "dataHeader": null,
-      "data": [
-        {
-          "property": "weight.obligation",
-          "property-operations": null,
-          "cells": [
-            "70/99"
-          ]
-        },
-        {
-          "property": "weight.commitment",
-          "property-operations": null,
-          "cells": [
-            "60/99"
-          ]
-        },
-        {
-          "property": "weight.consequence",
-          "property-operations": null,
-          "cells": [
-            "15/99"
-          ]
-        }
-      ]
-    }
-  ],
-  "meta": [
-    {
-      "type": "MANAGEMENT",
-      "dataHeader": null,
-      "data": [
-        {
-          "context": {
-            "value": "rule.entity.id",
-            "possible-matches": null
-          },
-          "cells": [
-            "InlandRevenueAuthorityofSingapore",
-            "https://www.iras.gov.sg/",
-            "d6mgsIlDx5ME"
-          ]
-        },
-        {
-          "context": {
-            "value": "rule.name.eng",
-            "possible-matches": null
-          },
-          "cells": [
-            "AdditionalBuyersStampDutyonPurchaseorTransferofResidentialProperty"
-          ]
-        },
-        {
-          "context": {
-            "value": "rule.id",
-            "possible-matches": null
-          },
-          "cells": [
-            "r6qW2UeKE5hq"
-          ]
-        },
-        {
-          "context": {
-            "value": "rule.version",
-            "possible-matches": null
-          },
-          "cells": [
-            "0.0.2"
-          ]
-        },
-        {
-          "context": {
-            "value": "rule.runtime",
-            "possible-matches": null
-          },
-          "cells": [
-            "0.5.0"
-          ]
-        },
-        {
-          "context": {
-            "value": "rule.criticality",
-            "possible-matches": null
-          },
-          "cells": [
-            "experimental"
-          ]
-        },
-        {
-          "context": {
-            "value": "rule.url",
-            "possible-matches": null
-          },
-          "cells": [
-            "https://www.iras.gov.sg/IRASHome/OtherTaxes/StampDutyforProperty/WorkingoutyourStamp\r\nDuty/BuyingorAcquiringProperty/WhatistheDutythatINeedtoPayasaBuyerorTransfereeof\r\nResidentialProperty/AdditionalBuyersStampDutyABSD/"
-          ]
-        },
-        {
-          "context": {
-            "value": "rule.doi",
-            "possible-matches": null
-          },
-          "cells": [
-            "10.1206/yd5Dw9Im5rJfaGheM84cFq"
-          ]
-        },
-        {
-          "context": {
-            "value": "rule.manager.id",
-            "possible-matches": null
-          },
-          "cells": [
-            "JosephPotvin",
-            "<jpotvin@xalgorithms.org",
-            "3ErzHgMpIhYI"
-          ]
-        },
-        {
-          "context": {
-            "value": "rule.author.id",
-            "possible-matches": null
-          },
-          "cells": [
-            "JosephPotvin",
-            "<jpotvin@xalgorithms.org",
-            "3ErzHgMpIhYI"
-          ]
-        },
-        {
-          "context": {
-            "value": "rule.maintainer.id",
-            "possible-matches": null
-          },
-          "cells": [
-            "RyanFleck",
-            "<ryan.fleck@protonmail.com>",
-            "wVXkRXp1palS"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "STANDARDS",
-      "dataHeader": null,
-      "data": [
-        {
-          "context": {
-            "value": "parties.buyer.industry",
-            "possible-matches": null
-          },
-          "cells": [
-            "ISIC"
-          ]
-        },
-        {
-          "context": {
-            "value": "data",
-            "possible-matches": null
-          },
-          "cells": [
-            "https://unstats.un.org/unsd/publication/seriesM/seriesm_4rev4e.pdf"
-          ]
-        },
-        {
-          "context": {
-            "value": "item:classification",
-            "possible-matches": null
-          },
-          "cells": [
-            "UNSPSC",
-            "https://www.unspsc.org"
-          ]
-        },
-        {
-          "context": {
-            "value": "document",
-            "possible-matches": null
-          },
-          "cells": [
-            "UBL",
-            "https://docs.oasisopen.org/ubl/osUBL2.2/mod/summary/reports/AllUBL2.2Documents.html"
-          ]
-        }
-      ]
-    }
-  ]
+    ]
 }
 ```
 
@@ -734,17 +531,29 @@ METADATA.STANDARDS ;
 1. Using `eslint-config-airbnb` with _Prettier_ to enforce style
    ([guide](https://blog.echobind.com/integrating-prettier-eslint-airbnb-style-guide-in-vscode-47f07b5d7d6a))
 
+### Plugins
+
 Name: PEG.js Language
+
 Id: sirtobi.pegjs-language
+
 Description: Syntax highlighting for PEG.js in Visual Studio Code.
+
 Version: 0.1.0
+
 Publisher: SrTobi
+
 VS Marketplace Link:
 https://marketplace.visualstudio.com/items?itemName=SirTobi.pegjs-language
 
 Name: PEG.js
+
 Id: tamuratak.vscode-pegjs
+
 Description: PEG.js language support for Visual Studio Code
+
 Version: 0.1.2
+
 Publisher: tamuratak
+
 VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=tamuratak.vscode-pegjs
