@@ -1,0 +1,66 @@
+INPUT.CONTEXT ;
+|SG|SG| : "jurisdictions" ;
+|20180401T00:00|99991230T23:50| : "datestimes" ;
+|UTC+08:00| : "timezones" ;
+
+INPUT.SOURCES ;
+|is.xalgo|purchaseorder| : "document" ;
+
+INPUT.FILTER ;
+|6810| : "parties.buyer.industry" ;//RealEstateActivitiesWithOwnOrLeasedProperty
+|80131600| : "item.classification" ;//Saleofpropertyandbuilding
+|SGD| : "item.price.currency" ;
+
+INPUT.PARTITION.onehot ;
+00|A|B|C|D|E|F| ;
+01|Y|N|N|N|N|N| : "buyer_profile"=="sgc1" ;//SingaporeCitizen,1stPrpty
+02|N|Y|N|N|N|N| : "buyer_profile"=="sgc2" ;//SingaporeCitizen,2ndPrpty
+03|N|N|Y|N|N|N| : "buyer_profile"=="sgcn" ;//SingaporeCitizen,AddtlPrpty
+04|N|N|N|Y|N|N| : "buyer_profile"=="spr1" ;//SingaporePerm.Residnt,1stPrpty
+05|N|N|N|N|Y|N| : "buyer_profile"=="sprn" ;//SingaporePerm.Residnt,AddtlPrpty
+06|N|N|N|N|N|Y| : "buyer_profile"=="sfen" ;//SingaporeForeignEntity,AnyPrpty
+
+OUTPUT.ASSERTION ;
+00|A|B|C|D|E|F| ;
+01|X|U|U|U|U|U| : "absd_rate"=0.00*price ;
+02|U|X|U|U|U|U| : "absd_rate"=0.07*price ;
+03|U|U|X|U|U|U| : "absd_rate"=0.10*price ;
+04|U|U|U|X|U|U| : "absd_rate"=0.05*price ;
+05|U|U|U|U|X|U| : "absd_rate"=0.10*price ;
+06|U|U|U|U|U|X| : "absd_rate"=0.15*price ;
+
+OUTPUT.PURPOSE ;
+|ruletaker| : "agency.rulemaker_ruletaker_thirdparty" ;
+|must| : "agency.must_may_should" ;
+|affirmative| : "agency.affirmative_negative_interrogative ;
+|do| : "agency.be_do_have" ;
+|practical|ethical| : "intent.logical_practical_ethical" ;
+|imperative| : "intent.imperative_declarative_empirical" ;
+|governance| : "intent.governance_commerce_other" ;
+
+OUTPUT.WEIGHT ;
+|70/99| : "weight.obligation" ;
+|60/99| : "weight.commitment" ;
+|15/99| : "weight.consequence" ;
+
+METADATA.MANAGEMENT ;
+|InlandRevenueAuthorityofSingapore|https://www.iras.gov.sg/|d6mgsIlDx5ME| : "rule.entity.id" ;      
+|AdditionalBuyersStampDutyonPurchaseorTransferofResidentialProperty| : "rule.name.eng" ;
+|r6qW2UeKE5hq| : "rule.id" ;
+|0.0.2| : "rule.version" ;
+|0.5.0| : "rule.runtime" ;
+|experimental| : "rule.criticality" ;
+|https://www.iras.gov.sg/IRASHome/OtherTaxes/StampDutyforProperty/WorkingoutyourStamp
+Duty/BuyingorAcquiringProperty/WhatistheDutythatINeedtoPayasaBuyerorTransfereeof
+ResidentialProperty/AdditionalBuyersStampDutyABSD/| : "rule.url" ;
+|10.1206/yd5Dw9Im5rJfaGheM84cFq| : "rule.doi" ;
+|JosephPotvin|<jpotvin@xalgorithms.org|3ErzHgMpIhYI| : "rule.manager.id" ;
+|JosephPotvin|<jpotvin@xalgorithms.org|3ErzHgMpIhYI| : "rule.author.id" ;
+|RyanFleck|<ryan.fleck@protonmail.com>|wVXkRXp1palS| : "rule.maintainer.id" ;
+
+METADATA.STANDARDS ;
+|ISIC| : "parties.buyer.industry" ;
+|https://unstats.un.org/unsd/publication/seriesM/seriesm_4rev4e.pdf| : "data" ;
+|UNSPSC|https://www.unspsc.org| : "item:classification";
+|UBL|https://docs.oasisopen.org/ubl/osUBL2.2/mod/summary/reports/AllUBL2.2Documents.html|:
+"document" ;

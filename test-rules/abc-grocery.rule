@@ -1,0 +1,49 @@
+INPUT.CONTEXT ;
+|CA|ON| : “jurisdictions” ;
+|2018­04­01T00:00|9999­12­30T23:50| : “dates­times” ;
+|UTC­05:00| : “timezones” ;
+INPUT.FILTER ;
+|packinglist| : "document" ;
+|4721| : “parties.seller.industry” ; //Retail sale of food in specialized stores
+|78142100| : "item.classification ; //Logistics operation management
+|CAD| : "item.price.currency ;
+INPUT.PARTITION ;
+00|A|B|C|D| ;
+01|N|Y|Y|N| : "box_at_least_half_full" ;
+02|H|Y|Y|N| : "box_type_is_standard" ;
+03|H|N|Y|H| : "box_contents_value" >= $100.00 ;
+OUTPUT.ASSERTION ;
+00|A|B|C|D| ;
+01|U|X|X|X| : "delivery_is_available" ;
+02|U|X|U|X| : "delivery_is_charged".
+OUTPUT.PURPOSE
+00|A|B|C| ;
+01|U|X|U| : "agency.rulemaker_ruletaker_thirdparty" ;
+02|U|X|U| : "agency.must_may_should" ;
+03|X|U|U| : "agency.affirmative_negative_interrogative ;
+04|U|X|U| : "agency.be_do_have" ;
+05|U|X|U| : "intent.logical_practical_ethical" ;
+06|U|X|U| : "intent.imperative_declarative_empirical" ;
+07|U|X|U| : "intent.governance_commerce_other" ;
+OUTPUT.WEIGHT
+|25/99| : "weight.obligation" ;
+|10/99| : "weight.commitment" ;
+|02/99| : "weight.consequence" ;
+METADATA.MANAGEMENT ;
+|ABC Grocers|https://www.abc­grocers.com/    about|805199718| : “rule.entity.id” ;
+|ABC Grocers Delivery Policy| : “rule.name.eng” ;
+|R4qG9UeKH5hW| : “rule.id” ;
+|0.0.1| : “rule.version” ;
+|0.5.0| : “rule.runtime” ;
+|experimental| : “rule.criticality” ;
+|https://www.abc­grocers.com/policies/delivery| : “rule.url” ;
+|10.1000/pqr456.s5rJfaGhaWpmmV3| : “rule.doi” ;
+|Joseph Potvin|<jpotvin@xalgorithms.org|3ErzHgMpIhYI| : “rule.manager.id” ;
+|Joseph Potvin|<jpotvin@xalgorithms.org|3ErzHgMpIhYI| : “rule.author.id” ;
+|Ryan Fleck|<ryan.fleck@protonmail.com>|wVXkRXp1palS| : “rule.maintainer.id” ;
+METADATA.STANDARDS ;
+|ISIC|https://unstats.un.org/unsd/publication/seriesM/seriesm_4rev4e.pdf| :
+"parties.seller.industry” ;
+|UNSPSC|https://www.unspsc.org| : "item:classification" ;
+|UBL|https://docs.oasis­open.org/ubl/os­UBL­2.2/mod/summary/reports/All­UBL­2.2­
+Documents.html| : "document” ;

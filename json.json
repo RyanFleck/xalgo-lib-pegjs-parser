@@ -1,0 +1,420 @@
+{
+    "input": [
+        {
+            "type": "CONTEXT",
+            "dataHeader": null,
+            "data": [
+                {
+                    "context": {
+                        "value": "float test",
+                        "possible-matches": null
+                    },
+                    "cells": [
+                        1123.1231
+                    ]
+                }
+            ]
+        }
+    ],
+    "output": [
+        {
+            "type": "ASSERTION",
+            "dataHeader": [
+                "A",
+                "B",
+                "C",
+                "D",
+                "E",
+                "F"
+            ],
+            "data": [
+                {
+                    "assignment": {
+                        "property": "absd_rate",
+                        "operations": [
+                            0,
+                            "*",
+                            "item.price",
+                            "*",
+                            5,
+                            "/",
+                            2
+                        ]
+                    },
+                    "property": null,
+                    "cells": [
+                        "X",
+                        "U",
+                        "U",
+                        "U",
+                        "U",
+                        "U"
+                    ]
+                },
+                {
+                    "assignment": {
+                        "property": "absd_rate",
+                        "operations": [
+                            0.07,
+                            "*",
+                            "item.price"
+                        ]
+                    },
+                    "property": null,
+                    "cells": [
+                        "U",
+                        "X",
+                        "U",
+                        "U",
+                        "U",
+                        "U"
+                    ]
+                },
+                {
+                    "assignment": {
+                        "property": "absd_rate",
+                        "operations": [
+                            0.1,
+                            "*",
+                            "item.price"
+                        ]
+                    },
+                    "property": null,
+                    "cells": [
+                        "U",
+                        "U",
+                        "X",
+                        "U",
+                        "U",
+                        "U"
+                    ]
+                },
+                {
+                    "assignment": {
+                        "property": "absd_rate",
+                        "operations": [
+                            0.05,
+                            "*",
+                            "item.price"
+                        ]
+                    },
+                    "property": null,
+                    "cells": [
+                        "U",
+                        "U",
+                        "U",
+                        "X",
+                        "U",
+                        "U"
+                    ]
+                },
+                {
+                    "assignment": {
+                        "property": "absd_rate",
+                        "operations": [
+                            0.1,
+                            "*",
+                            "item.price"
+                        ]
+                    },
+                    "property": null,
+                    "cells": [
+                        "U",
+                        "U",
+                        "U",
+                        "U",
+                        "X",
+                        "U"
+                    ]
+                },
+                {
+                    "assignment": {
+                        "property": "absd_rate",
+                        "operations": [
+                            0.15,
+                            "*",
+                            "item.price"
+                        ]
+                    },
+                    "property": null,
+                    "cells": [
+                        "U",
+                        "U",
+                        "U",
+                        "U",
+                        "U",
+                        "X"
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "PURPOSE",
+            "dataHeader": [
+                "A",
+                "B",
+                "C"
+            ],
+            "data": [
+                {
+                    "assignment": null,
+                    "property": "agency.rulemaker_ruletaker_thirdparty",
+                    "cells": [
+                        "U",
+                        "X",
+                        "U"
+                    ]
+                },
+                {
+                    "assignment": null,
+                    "property": "agency.must_may_should",
+                    "cells": [
+                        "U",
+                        "X",
+                        "U"
+                    ]
+                },
+                {
+                    "assignment": null,
+                    "property": "agency.affirmative_negative_interrogative",
+                    "cells": [
+                        "X",
+                        "U",
+                        "U"
+                    ]
+                },
+                {
+                    "assignment": null,
+                    "property": "agency.be_do_have",
+                    "cells": [
+                        "U",
+                        "X",
+                        "U"
+                    ]
+                },
+                {
+                    "assignment": null,
+                    "property": "intent.logical_practical_ethical",
+                    "cells": [
+                        "U",
+                        "X",
+                        "U"
+                    ]
+                },
+                {
+                    "assignment": null,
+                    "property": "intent.imperative_declarative_empirical",
+                    "cells": [
+                        "U",
+                        "X",
+                        "U"
+                    ]
+                },
+                {
+                    "assignment": null,
+                    "property": "intent.governance_commerce_other",
+                    "cells": [
+                        "U",
+                        "X",
+                        "U"
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "WEIGHT",
+            "dataHeader": null,
+            "data": [
+                {
+                    "assignment": null,
+                    "property": "weight.obligation",
+                    "cells": [
+                        "70/99"
+                    ]
+                },
+                {
+                    "assignment": null,
+                    "property": "weight.commitment",
+                    "cells": [
+                        "60/99"
+                    ]
+                },
+                {
+                    "assignment": null,
+                    "property": "weight.consequence",
+                    "cells": [
+                        "15/99"
+                    ]
+                }
+            ]
+        }
+    ],
+    "meta": [
+        {
+            "type": "MANAGEMENT",
+            "dataHeader": null,
+            "data": [
+                {
+                    "context": {
+                        "value": "rule.entity.id",
+                        "possible-matches": null
+                    },
+                    "cells": [
+                        "InlandRevenueAuthorityofSingapore",
+                        "https://www.iras.gov.sg/",
+                        752977364
+                    ]
+                },
+                {
+                    "context": {
+                        "value": "rule.name.eng",
+                        "possible-matches": null
+                    },
+                    "cells": [
+                        "AdditionalBuyersStampDuty"
+                    ]
+                },
+                {
+                    "context": {
+                        "value": "rule.id",
+                        "possible-matches": null
+                    },
+                    "cells": [
+                        "r6qW2UeKE5hq"
+                    ]
+                },
+                {
+                    "context": {
+                        "value": "rule.version",
+                        "possible-matches": null
+                    },
+                    "cells": [
+                        "0.0.2"
+                    ]
+                },
+                {
+                    "context": {
+                        "value": "rule.runtime",
+                        "possible-matches": null
+                    },
+                    "cells": [
+                        "0.5.0"
+                    ]
+                },
+                {
+                    "context": {
+                        "value": "rule.criticality",
+                        "possible-matches": null
+                    },
+                    "cells": [
+                        "experimental"
+                    ]
+                },
+                {
+                    "context": {
+                        "value": "rule.url",
+                        "possible-matches": null
+                    },
+                    "cells": [
+                        "https://www.iras.gov.sg/IRASHome/OtherTaxes/StampDutyforProperty/WorkingoutyourStampDuty/BuyingorAcquiringProperty/WhatistheDutythatINeedtoPayasaBuyerorTransfereeofResidentialProperty/AdditionalBuyersStampDutyABSD/"
+                    ]
+                },
+                {
+                    "context": {
+                        "value": "rule.doi",
+                        "possible-matches": null
+                    },
+                    "cells": [
+                        "10.1206/yd5Dw9Im5rJfaGheM84cFq"
+                    ]
+                },
+                {
+                    "context": {
+                        "value": "rule.manager.id",
+                        "possible-matches": null
+                    },
+                    "cells": [
+                        "JosephPotvin",
+                        "<jpotvin@xalgorithms.org",
+                        "3ErzHgMpIhYI"
+                    ]
+                },
+                {
+                    "context": {
+                        "value": "rule.author.id",
+                        "possible-matches": null
+                    },
+                    "cells": [
+                        "JosephPotvin",
+                        "<jpotvin@xalgorithms.org",
+                        "3ErzHgMpIhYI"
+                    ]
+                },
+                {
+                    "context": {
+                        "value": "rule.maintainer.id",
+                        "possible-matches": null
+                    },
+                    "cells": [
+                        "RyanFleck",
+                        "<ryan.fleck@protonmail.com>",
+                        "wVXkRXp1palS"
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "STANDARDS",
+            "dataHeader": null,
+            "data": [
+                {
+                    "context": {
+                        "value": "parties.buyer.industry",
+                        "possible-matches": null
+                    },
+                    "cells": [
+                        "ISIC"
+                    ]
+                },
+                {
+                    "context": {
+                        "value": "source document",
+                        "possible-matches": null
+                    },
+                    "cells": [
+                        "https://unstats.un.org/unsd/publication/seriesM/seriesm_4rev4e.pdf"
+                    ]
+                },
+                {
+                    "context": {
+                        "value": "item:classification",
+                        "possible-matches": null
+                    },
+                    "cells": [
+                        "UNSPSC",
+                        "https://www.unspsc.org"
+                    ]
+                },
+                {
+                    "context": {
+                        "value": "UBL",
+                        "possible-matches": null
+                    },
+                    "cells": [
+                        "UBL",
+                        "https://docs.oasisopen.org/ubl/osUBL2.2/mod/summary"
+                    ]
+                },
+                {
+                    "context": {
+                        "value": "document",
+                        "possible-matches": null
+                    },
+                    "cells": [
+                        "/reports/AllUBL2.2Documents.html"
+                    ]
+                }
+            ]
+        }
+    ]
+}
