@@ -1,4 +1,6 @@
 # Xalgo PEGjs Parser
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FRyanFleck%2Fxalgo-lib-pegjs-parser.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FRyanFleck%2Fxalgo-lib-pegjs-parser?ref=badge_shield)
+
 
 This is a test parser based on a rule format proposal made on May 21, 2020. It
 is currently not compatible with the master Interlibr system.
@@ -560,3 +562,7 @@ Version: 0.1.2
 Publisher: tamuratak
 
 VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=tamuratak.vscode-pegjs
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FRyanFleck%2Fxalgo-lib-pegjs-parser.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FRyanFleck%2Fxalgo-lib-pegjs-parser?ref=badge_large)
