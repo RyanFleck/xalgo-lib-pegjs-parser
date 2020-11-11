@@ -1,3 +1,7 @@
+**Archived,** see <https://github.com/RyanFleck/Xalgo-System-Prototype> for the latest prototype.
+
+<br />
+
 # Xalgo PEGjs Parser
 
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/debd0fc7feea449eb0b34f6199fa6849)](https://www.codacy.com/manual/RyanFleck/xalgo-lib-pegjs-parser/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=RyanFleck/xalgo-lib-pegjs-parser&amp;utm_campaign=Badge_Grade)
