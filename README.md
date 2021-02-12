@@ -3,6 +3,8 @@
 <br />
 
 # Xalgo PEGjs Parser
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FRyanFleck%2Fxalgo-lib-pegjs-parser.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FRyanFleck%2Fxalgo-lib-pegjs-parser?ref=badge_shield)
+
 
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/debd0fc7feea449eb0b34f6199fa6849)](https://www.codacy.com/manual/RyanFleck/xalgo-lib-pegjs-parser/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=RyanFleck/xalgo-lib-pegjs-parser&amp;utm_campaign=Badge_Grade)
 
@@ -566,3 +568,7 @@ Version: 0.1.2
 Publisher: tamuratak
 
 VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=tamuratak.vscode-pegjs
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FRyanFleck%2Fxalgo-lib-pegjs-parser.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FRyanFleck%2Fxalgo-lib-pegjs-parser?ref=badge_large)
